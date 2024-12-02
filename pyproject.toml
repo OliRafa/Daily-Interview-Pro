@@ -2,12 +2,13 @@
 profile = "black"
 
 [tool.poetry]
-name = "daily interview pro"
+name = "leetcode"
 version = "0.1.0"
 description = "Solved problems from Daily Interview Pro mailing list"
 authors = ["Rafael Oliveira"]
 license = "The Unlicensed"
 readme = "README.md"
+packages = [{include = "advent_of_code_2024", from="src"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
