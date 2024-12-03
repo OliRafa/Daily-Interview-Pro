@@ -71,12 +71,9 @@
 
 from pathlib import Path
 
-INPUTS_FILE_PATH = Path(__file__).parent.joinpath("day_01_inputs.txt")
+from advent_of_code_2024.utils.files import read_inputs
 
-
-def read_inputs(inputs_file_path: Path) -> list[str]:
-    with inputs_file_path.open("r") as buffer:
-        return buffer.readlines()
+INPUTS_FILE_PATH = Path(__file__).parent.joinpath("data", "day_01_inputs.txt")
 
 
 def clean_inputs(inputs: list[str]) -> list[list[str]]:

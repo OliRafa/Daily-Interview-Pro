@@ -43,9 +43,9 @@
 from advent_of_code_2024.day_01_historian_hysteria_part_01 import (
     INPUTS_FILE_PATH,
     clean_inputs,
-    read_inputs,
     transform_distance_pairs,
 )
+from advent_of_code_2024.utils.files import read_inputs
 
 
 def calculate_distances_count(distances: list[int]) -> dict[int, int]:
