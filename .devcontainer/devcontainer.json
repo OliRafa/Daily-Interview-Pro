@@ -1,0 +1,28 @@
+{
+  "name": "Daily Interview Pro",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "workspaceFolder": "/home/jarvis/Documents/repos/Daily-Interview-Pro",
+  "workspaceMount": "source=/home/jarvis/Documents/repos/Daily-Interview-Pro,target=/home/jarvis/Documents/repos/Daily-Interview-Pro,type=bind,consistency=cached",
+  "mounts": [
+    {
+      "source": "/home/jarvis/.gitconfig",
+      "target": "/home/dev/.gitconfig",
+      "type": "bind"
+    },
+    {
+      "source": "/home/jarvis/.ssh",
+      "target": "/home/dev/.ssh",
+      "type": "bind"
+    }
+  ],
+  "features": {
+    "ghcr.io/devcontainers/features/docker-outside-of-docker": {},
+    "ghcr.io/OliRafa/devcontainer-features/neovim-setup": {},
+    "ghcr.io/OliRafa/devcontainer-features/zsh-setup": {}
+  },
+  "remoteUser": "dev",
+  "postCreateCommand": "poetry install"
+}
